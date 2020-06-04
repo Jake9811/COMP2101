@@ -10,11 +10,5 @@
 # roll the dice and display the result
 echo "
 Rolling...
-$(( RANDOM % 6 + 1)) rolled
-$(( RANDOM % 6 + 1)) rolled
-$(( RANDOM % 6 + 1)) rolled
-$(( RANDOM % 6 + 1)) rolled
-$(( RANDOM % 6 + 1)) rolled
-$(( RANDOM % 6 + 1)) rolled
-$(( RANDOM % 6 + 1)) rolled
+$(( RANDOM % 6 + 1)), $(( RANDOM % 6 + 1)), $(( RANDOM % 6 + 1)), $(( RANDOM % 6 + 1)), $(( RANDOM % 6 + 1)), $(( RANDOM % 6 + 1)), $(( RANDOM % 6 + 1)) rolled
 "
