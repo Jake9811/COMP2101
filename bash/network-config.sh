@@ -46,7 +46,7 @@ lan_address=$(ip a s $interface_name|awk '/inet /{gsub(/\/.*/,"");print $2}')
 lan_hostname=$(getent hosts $lan_address | awk '{print $2}')
 ext_ip=$(curl -s icanhazip.com)
 ext_name=$(getent hosts $ext_ip | awk '{print $2}')
-router_address=$(route | awk '/192/{print $1}')
+router_address=$(ip r s default| cut -d ' ' -f 3)
 router_name=$(getent hosts $router_address | awk '{print $2}')
 
 cat <<EOF
