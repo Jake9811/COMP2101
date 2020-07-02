@@ -30,7 +30,7 @@ while [ $# -gt 0 ]; do
         ;;
     # for -d option, check for N i.e. $2. If available, set debug_lvl var. If not, display an error.
     -d )
-        if [[ $2 =~ ^[0-9]$ ]]; then
+        if [[ $2 =~ ^[1-9]$ ]]; then
           debug_lvl="$2"
           shift
         else
