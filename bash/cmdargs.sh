@@ -30,11 +30,12 @@ while [ $# -gt 0 ]; do
         ;;
     # for -d option, check for N i.e. $2. If available, set debug_lvl var. If not, display an error.
     -d )
-        if [[ $2 =~ [0-9] ]]; then
+        if [[ $2 =~ ^[0-9]$ ]]; then
           debug_lvl="$2"
           shift
         else
           echo "ERROR: debug level N not given or not a single digit, after -d option."
+          exit
         fi
         ;;
     # for everything else, put into myargs array
